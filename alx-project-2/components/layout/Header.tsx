@@ -1,4 +1,7 @@
+// components/layout/Header.tsx
+
 import React from "react";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -9,7 +12,11 @@ const Header: React.FC = () => {
         textAlign: "center",
       }}
     >
-      <h1>My Next.js Project Header</h1>
+      <nav style={{ display: "flex", justifyContent: "center", gap: "2rem" }}>
+        <Link href="/">Home</Link>
+        <Link href="/home">/home</Link>
+        <Link href="/about">/about</Link>
+      </nav>
     </header>
   );
 };
